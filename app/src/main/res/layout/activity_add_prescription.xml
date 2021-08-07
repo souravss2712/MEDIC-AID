@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".new_prescription.AddPrescriptionActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:background="#ffffff"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <ImageView
+            android:id="@+id/dashlineleft"
+            android:layout_width="0dp"
+            android:layout_height="4dp"
+            android:layout_marginStart="2dp"
+            android:background="@drawable/dashline"
+            app:layout_constraintBottom_toBottomOf="@+id/basicdetailnumber"
+            app:layout_constraintEnd_toEndOf="@+id/symptomsnumber"
+            app:layout_constraintStart_toStartOf="@+id/basicdetailnumber"
+            app:layout_constraintTop_toTopOf="@+id/symptomsnumber" />
+
+        <ImageView
+            android:id="@+id/dashlinecenter"
+            android:layout_width="0dp"
+            android:layout_height="4dp"
+            android:src="@drawable/dashline"
+            app:layout_constraintBottom_toBottomOf="@+id/diagonisisnumber"
+            app:layout_constraintEnd_toEndOf="@+id/diagonisisnumber"
+            app:layout_constraintStart_toStartOf="@+id/symptomsnumber"
+            app:layout_constraintTop_toTopOf="@+id/symptomsnumber" />
+
+        <ImageView
+            android:id="@+id/dashlineright"
+            android:layout_width="0dp"
+            android:layout_height="4dp"
+            android:background="@drawable/dashline"
+            app:layout_constraintBottom_toBottomOf="@+id/diagonisisnumber"
+            app:layout_constraintEnd_toEndOf="@+id/forthnumber"
+            app:layout_constraintStart_toStartOf="@+id/diagonisisnumber"
+            app:layout_constraintTop_toTopOf="@+id/forthnumber" />
+
+        <ProgressBar
+            android:id="@+id/progressleft"
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_width="0dp"
+            android:layout_height="2dp"
+            android:layout_marginStart="2dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/basicdetailnumber"
+            app:layout_constraintEnd_toEndOf="@+id/symptomsnumber"
+            app:layout_constraintStart_toStartOf="@+id/basicdetailnumber"
+            app:layout_constraintTop_toTopOf="@+id/symptomsnumber" />
+
+        <ProgressBar
+            android:id="@+id/progresscenter"
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_width="0dp"
+            android:layout_height="2dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/diagonisisnumber"
+            app:layout_constraintEnd_toEndOf="@+id/diagonisisnumber"
+            app:layout_constraintStart_toStartOf="@+id/symptomsnumber"
+            app:layout_constraintTop_toTopOf="@+id/symptomsnumber" />
+
+        <ProgressBar
+            android:id="@+id/progressright"
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_width="0dp"
+            android:layout_height="2dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/diagonisisnumber"
+            app:layout_constraintEnd_toEndOf="@+id/forthnumber"
+            app:layout_constraintStart_toStartOf="@+id/diagonisisnumber"
+            app:layout_constraintTop_toTopOf="@+id/forthnumber" />
+
+        <TextView
+            android:id="@+id/basicdetailtextview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="7dp"
+            android:alpha="0"
+            android:fontFamily="@font/raleway_bold"
+            android:gravity="center"
+            android:text="Basic\nDetails"
+            android:textColor="#1274E3"
+            app:layout_constraintBottom_toTopOf="@+id/basicdetailnumber"
+            app:layout_constraintEnd_toEndOf="@+id/basicdetailnumber"
+            app:layout_constraintStart_toStartOf="@+id/basicdetailnumber" />
+
+        <TextView
+            android:id="@+id/symptomstextview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:alpha="0"
+            android:fontFamily="@font/raleway_bold"
+            android:gravity="center"
+            android:text="Symptoms"
+            android:textColor="#1274E3"
+            app:layout_constraintEnd_toEndOf="@+id/symptomsnumber"
+            app:layout_constraintStart_toStartOf="@+id/symptomsnumber"
+            app:layout_constraintTop_toBottomOf="@+id/symptomsnumber" />
+
+        <TextView
+            android:id="@+id/diagonisistextview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:alpha="0"
+            android:fontFamily="@font/raleway_bold"
+            android:gravity="center"
+            android:text="Diagonisis"
+            android:textColor="#1274E3"
+            app:layout_constraintBottom_toTopOf="@+id/diagonisisnumber"
+            app:layout_constraintEnd_toEndOf="@+id/diagonisisnumber"
+            app:layout_constraintStart_toStartOf="@+id/diagonisisnumber" />
+
+        <TextView
+            android:id="@+id/forthtextview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:alpha="0"
+            android:fontFamily="@font/raleway_bold"
+            android:gravity="center"
+            android:text="Symptoms"
+            android:textColor="#1274E3"
+            app:layout_constraintEnd_toEndOf="@+id/forthnumber"
+            app:layout_constraintStart_toStartOf="@+id/forthnumber"
+            app:layout_constraintTop_toBottomOf="@+id/forthnumber" />
+
+        <TextView
+            android:id="@+id/diagonisisnumber"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="87dp"
+            android:background="@drawable/white_bg"
+            android:fontFamily="@font/raleway_semibold"
+            android:gravity="center"
+            android:text="3"
+            android:textColor="#1B7AE3"
+            app:layout_constraintEnd_toStartOf="@+id/forthnumber"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/symptomsnumber"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/forthnumber"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="33dp"
+            android:background="@drawable/white_bg"
+            android:fontFamily="@font/raleway_semibold"
+            android:gravity="center"
+            android:text="4"
+            android:textColor="#1B7AE3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/diagonisisnumber"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/basicdetailnumber"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="87dp"
+            android:background="@drawable/white_bg"
+            android:fontFamily="@font/raleway_semibold"
+            android:gravity="center"
+            android:text="1"
+            android:textColor="#1B7AE3"
+            app:layout_constraintEnd_toStartOf="@+id/symptomsnumber"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/symptomsnumber"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="33dp"
+            android:background="@drawable/white_bg"
+            android:fontFamily="@font/raleway_semibold"
+            android:gravity="center"
+            android:text="2"
+            android:textColor="#1B7AE3"
+            app:layout_constraintEnd_toStartOf="@+id/diagonisisnumber"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/basicdetailnumber"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:layout_width="20dp"
+        android:layout_height="16dp"
+        android:layout_marginStart="15dp"
+        android:src="@drawable/ic_launcher_background"
+        android:layout_marginTop="18dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <FrameLayout
+        android:id="@+id/framelayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/fragment_background_gradient"
+        android:layout_marginTop="142dp"
+        android:layout_marginBottom="55dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:id="@+id/send"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#2f84e3"
+            android:fontFamily="@font/raleway_bold"
+            android:gravity="center"
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp"
+            android:text="SEND"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/close"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:fontFamily="@font/raleway_bold"
+            android:gravity="center"
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp"
+            android:text="CLOSE"
+            android:textColor="#2f84e3"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

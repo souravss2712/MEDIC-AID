@@ -1,0 +1,281 @@
+<html>
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script>
+        function openSignIn(){
+            var signin=document.getElementById("signinDiv")
+            signin.style.display="block"
+            var signinButton = document.getElementById("button_login")
+            signinButton.style.display="none"
+            var signupButton = document.getElementById("button_signup")
+            signupButton.style.display="none"
+        }
+        function openSignUp(){
+            var signup=document.getElementById("signupDiv")
+            signup.style.display="block"
+            var signupButton = document.getElementById("button_signup")
+            signupButton.style.display="none"
+            var signinButton = document.getElementById("button_login")
+            signinButton.style.display="none"
+        }
+    </script>
+    <style>
+        #signinDiv {
+            display: none;
+        }
+        #signupDiv {
+            display: none;
+            }
+        .topright{
+            position:absolute;
+            top:0;
+            right:0;
+            margin-top:300px;
+        }
+    </style>
+</head>
+
+<body style="background-color: #3688E3;">
+    <div
+    class="container"
+    style="background-color: #3688E3;width: 100%;height: 720px;"
+    >
+    <div class="row" style="margin-top: 30px;">
+      <p
+        style="font-size: 50px;color: #ffffff; margin-top: 100px ;margin-left: 100px; font-family:raleway_bold;"
+      >
+        Welcome to Vedanta!
+      </p>
+    </div>
+    <div class="row">
+      <p style="font-size: 24px;color: #FFFFFF; margin-left: 100px;">
+        What next?
+      </p>
+    </div>
+
+    <div>
+    <div
+      class="row"
+      style="margin-left: 100px;margin-top: 60px;"
+      *ngIf="!isSignUp && !isSignIn"
+    >
+      <button
+        onclick="openSignIn()"
+        id="button_login"
+        style="margin-top: 40px;border-radius: 100px;background-color: #FFFFFF; 
+      border: none;
+      color: #3688E3;
+      height: 70px;
+      width: 260px;
+      padding: 20px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 27px;
+      margin: 4px 2px;
+      cursor: pointer;"
+      >
+        Login
+      </button>
+    </div>
+    <div
+      onclick="openSignUp()"
+      class="row"
+      style="margin-left: 100px;margin-top:20px;"
+      *ngIf="!isSignIn && !isSignUp"
+    >
+      <button
+        id="button_signup"
+        style="border-radius: 100px;background-color: #FFFFFF; 
+      border: none;
+      color: #3688E3;
+      height: 70px;
+      width: 260px;
+      padding: 20px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 27px;
+      margin: 4px 2px;
+      cursor: pointer;"
+      >
+        Sign up
+      </button>
+    </div>
+    <div class="row" id="signinDiv" *ngIf="isSignIn" style="margin-left: 100px">
+      <div class="col-xs-3">
+        <form #authForm="ngForm" (ngSubmit)="onSubmitSignIn(authForm)" id="signinform">
+          <div class="form-group">
+            <label for="email" style="color: #FFFFFF;">Email</label>
+            <input
+              type="email"
+              id="sign-in-email"
+              class="form-control"
+              ngModel
+              name="email"
+              required
+              email
+            />
+          </div>
+          <div class="form-group">
+            <label for="password" style="color: #FFFFFF;">password</label>
+            <input
+              type="password"
+              id="sign-in-password"
+              class="form-control"
+              ngModel
+              name="password"
+              required
+              minlength="6"
+            />
+          </div>
+          <div>
+            <button
+              id="do_signin"
+              type="submit"
+              style="border-radius: 100px;background-color: #FFFFFF; 
+          border: none;
+          color: #3688E3;
+          height: 40px;
+          width: 120px;
+          padding: 10px;
+          text-align: center;
+          text-decoration: none;
+          display: inline-block;
+          font-size: 16px;
+          margin: 4px 2px;
+          cursor: pointer;"
+            >
+              Sign in
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="row" id= "signupDiv" *ngIf="isSignUp" style="margin-left: 100px;">
+      <div class="col-xs-3">
+        <form #authForm="ngForm" (ngSubmit)="onSubmitSignUp(authForm)" id="signupform">
+          <div class="form-group">
+            <label for="name" style="color: #FFFFFF;">Name</label>
+            <input
+              type="name"
+              id="name"
+              class="form-control"
+              name="name"
+              ngModel
+              required
+              name
+            />
+          </div>
+          <div class="form-group">
+            <label for="number" style="color: #FFFFFF;">Phone Number</label>
+            <input
+              type="number"
+              id="number"
+              class="form-control"
+              ngModel
+              name="number"
+              required
+              number
+            />
+          </div>
+          <div class="form-group">
+            <label for="email" style="color: #FFFFFF;">Email</label>
+            <input
+              type="email"
+              id="email"
+              class="form-control"
+              ngModel
+              name="email"
+              required
+              email
+            />
+          </div>
+          <div class="form-group">
+            <label for="password" style="color: #FFFFFF;">Choose Password</label>
+            <input
+              type="password"
+              id="password"
+              class="form-control"
+              ngModel
+              name="password"
+              required
+              password
+            />
+          </div>
+          <div class="form-group">
+            <label for="number" style="color: #FFFFFF;">Enter clinic ID</label>
+            <input
+              type="number"
+              id="clinicid"
+              class="form-control"
+              ngModel
+              name="clinicid"
+              required
+              number
+            />
+          </div>
+          <div>
+            <button
+              id="do_signup"
+              type="submit"
+              style="border-radius: 100px;background-color: #FFFFFF; 
+          border: none;
+          color: #3688E3;
+          height: 40px;
+          width: 120px;
+          padding: 10px;
+          text-align: center;
+          text-decoration: none;
+          display: inline-block;
+          font-size: 16px;
+          margin: 4px 2px;
+          cursor: pointer;"
+            >
+              Sign up
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+    </div>
+    <div class="topright">
+        <img src="mainbg.png" width="600px" height="400px" >
+    </div>
+    </div>
+
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.8.2/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.8.2/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.8.2/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.8.2/firebase-firestore.js"></script>
+
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyBlyx_6Hb2dY_KMc5WbArjgDQcUtgPUiEs",
+    authDomain: "vedanta-6c527.firebaseapp.com",
+    databaseURL: "https://vedanta-6c527.firebaseio.com",
+    projectId: "vedanta-6c527",
+    storageBucket: "vedanta-6c527.appspot.com",
+    messagingSenderId: "328727345990",
+    appId: "1:328727345990:web:8d3f243bc656bda03b4347",
+    measurementId: "G-KSEY976X91"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  const auth = firebase.auth()
+  const details = firebase.database()
+  const firestore = firebase.firestore();
+</script>
+<script src="./index.js"></script> 
+
+
+</body>
+</html>

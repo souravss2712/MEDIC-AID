@@ -1,0 +1,212 @@
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_tab"
+    android:layout_width="330dp"
+    android:layout_height="550dp"
+    app:cardBackgroundColor="@color/white"
+    android:background="#FFFFFF"
+    android:gravity="center_horizontal"
+    app:cardElevation="0dp"
+    android:orientation="vertical"
+    app:cardCornerRadius="20dp">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <TextView
+            android:id="@+id/edit_working_hours"
+            android:layout_width="wrap_content"
+
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/raleway_medium"
+            android:text="Edit Working Hours"
+            android:textColor="@color/lightBlack2"
+            android:textSize="16dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="60dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="70dp"
+            app:cardBackgroundColor="@color/lightGrey"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/edit_working_hours">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+
+                app:layout_constraintTop_toBottomOf="@id/edit_working_hours">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:orientation="vertical">
+
+
+                    <androidx.appcompat.widget.AppCompatSpinner
+                        android:id="@+id/day_spinner"
+
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:background="@android:color/transparent"
+                        android:entries="@array/days_arrays"
+                        android:fontFamily="@font/raleway_medium"
+                        android:prompt="@string/day_prompt"
+
+                        android:spinnerMode="dropdown"
+                        android:text="Monday"
+                        android:textColor="@color/black">
+
+                    </androidx.appcompat.widget.AppCompatSpinner>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="5dp"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatSpinner
+                            android:id="@+id/time_spinner"
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@android:color/transparent"
+
+                            android:entries="@array/time_arrays"
+                            android:fontFamily="@font/raleway_medium"
+                            android:gravity="center"
+                            android:prompt="@string/time_prompt"
+                            android:spinnerMode="dropdown"
+
+                            android:text="7:00 am"
+                            android:textColor="@color/black">
+
+                        </androidx.appcompat.widget.AppCompatSpinner>
+
+                        <TextView
+                            android:id="@+id/textView4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/raleway_medium"
+
+                            android:gravity="center"
+                            android:text="to"
+                            android:textColor="@color/black" />
+
+
+                        <androidx.appcompat.widget.AppCompatSpinner
+                            android:id="@+id/time_spinner2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+
+                            android:background="@android:color/transparent"
+                            android:entries="@array/time_arrays2"
+                            android:fontFamily="@font/raleway_medium"
+                            android:gravity="center"
+                            android:prompt="@string/time_prompt2"
+
+                            android:spinnerMode="dropdown"
+                            android:text="7:00 am"
+                            android:textColor="@color/black">
+
+                        </androidx.appcompat.widget.AppCompatSpinner>
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/add_slot"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:fontFamily="@font/raleway_medium"
+                        android:gravity="end"
+                        android:text="+ ADD SLOT"
+                        android:textColor="@color/lightBlack2"
+                        android:textSize="10dp" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/add_day"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/raleway_medium"
+                    android:gravity="center"
+                    android:text="+ ADD WORKING DAY"
+                    android:textColor="@color/lightBlack2"
+                    android:textSize="10dp" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:id="@+id/view_blue"
+            app:layout_constraintBottom_toTopOf="@id/linear_layout"
+            android:background="#3D8BE3"
+            />
+
+        <LinearLayout
+            android:id="@+id/linear_layout"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/raleway_medium"
+                android:textSize="13dp"
+                android:textColor="@color/lightBlue"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:text="CANCEL" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/raleway_medium"
+                android:textSize="13dp"
+                android:textColor="@color/white"
+                android:background="@color/darkBlue"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:text="SAVE" />
+        </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.cardview.widget.CardView>

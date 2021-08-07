@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "305958164673",
+    "firebase_url": "https://vedanta-17.firebaseio.com",
+    "project_id": "vedanta-17",
+    "storage_bucket": "vedanta-17.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:305958164673:android:33cc35e00e587cfbe4dc40",
+        "android_client_info": {
+          "package_name": "in.codepredators.vedanta"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "305958164673-7aeedlbc2bl7pd8gf20qn3hbqjiocs3u.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "in.codepredators.vedanta",
+            "certificate_hash": "fe40299dac0449483c13a6a6eb97adada75fc49c"
+          }
+        },
+        {
+          "client_id": "305958164673-v03h0ef9dme72h4r138hcjrpcsc7dmn7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDiW-kL8zqWyPpKV-fQcsEGeqvmUHzH2qo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "305958164673-v03h0ef9dme72h4r138hcjrpcsc7dmn7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

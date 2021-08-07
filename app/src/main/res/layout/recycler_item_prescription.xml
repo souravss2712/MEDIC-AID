@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="5dp">
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/common_recycler_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="30dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginBottom="10dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/disease_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/raleway_semibold"
+                android:maxLines="1"
+                android:text="Obsessive Compulsive Disorder"
+                android:textColor="@color/black"
+                android:textSize="13sp"
+                android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/patient_photo"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="15dp"
+                app:layout_constraintHeight_max="50dp"
+                app:layout_constraintHeight_min="40dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/disease_name"
+                app:layout_constraintWidth_max="50dp"
+                app:layout_constraintWidth_min="40dp"
+                app:srcCompat="@android:drawable/presence_online" />
+
+
+            <TextView
+                android:id="@+id/patient_name"
+                android:layout_width="146dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="3dp"
+                android:fontFamily="@font/raleway_medium"
+                android:maxLines="1"
+                android:text="Parth Sharma | M | 19"
+                android:textColor="@color/black"
+                android:textSize="13sp"
+                app:layout_constraintEnd_toStartOf="@+id/new_or_urgent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/patient_photo"
+                app:layout_constraintTop_toTopOf="@+id/patient_photo" />
+
+            <!--appointment date and time-->
+
+            <!--disease name-->
+
+            <TextView
+                android:id="@+id/visited_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/raleway_medium"
+                android:text="30 minutes ago"
+                android:textColor="@color/grey"
+                android:textSize="12sp"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="@+id/patient_photo"
+                app:layout_constraintStart_toStartOf="@+id/patient_name"
+                app:layout_constraintTop_toBottomOf="@id/patient_name"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/patients_disease"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:fontFamily="@font/raleway_medium"
+                android:maxLines="1"
+                android:text="Obsessive Compulsive Disorder"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                android:visibility="visible"
+                app:layout_constraintStart_toStartOf="@+id/patient_name"
+                app:layout_constraintTop_toBottomOf="@id/patient_name" />
+
+            <!--URGENT or NEW status-->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/new_or_urgent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="15dp"
+                android:backgroundTint="@color/red"
+                android:visibility="visible"
+                app:cardCornerRadius="5dp"
+                app:cardElevation="4dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/patient_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="7dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="7dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="#00000000"
+                    android:fontFamily="@font/raleway_bold"
+                    android:text="URGENT!"
+                    android:textColor="@color/white"
+                    android:textSize="11sp" />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/medication_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="35dp"
+                android:elevation="0dp"
+                app:cardElevation="0dp"
+                android:background="@color/lightGrey"
+                android:visibility="visible"
+                android:layout_marginEnd="18dp"
+                android:layout_marginStart="18dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/patient_name">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginBottom="4dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="6dp"
+                        android:text="Medications :" />
+
+                    <TextView
+                        android:id="@+id/medication"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="6dp"
+                        android:fontFamily="@font/raleway_medium"
+                        android:maxLines="1"
+                        android:text="Fluvoxamine, Fluoxetine (Prozac), Clom.."
+                        android:textColor="@color/black" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!--time and date card-->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/appointment_time_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="30dp"
+                android:elevation="0dp"
+                android:layout_marginEnd="18dp"
+                android:layout_marginBottom="35dp"
+                android:visibility="visible"
+                app:cardElevation="0dp"
+                app:cardBackgroundColor="@color/lightGrey"
+                app:cardCornerRadius="4dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/patient_name">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="6dp"
+                    android:layout_marginBottom="5dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/raleway_medium"
+                            android:text="Time : "
+                            android:textColor="@color/dark_grey"
+                            android:textSize="11sp" />
+
+                        <TextView
+                            android:id="@+id/appointment_time"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/raleway_medium"
+                            android:maxLines="1"
+                            android:text="5 pm"
+                            android:textColor="@color/black"
+                            android:textSize="11sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/raleway_medium"
+                            android:text="Date : "
+                            android:textColor="@color/dark_grey"
+                            android:textSize="11sp" />
+
+                        <TextView
+                            android:id="@+id/appointment_date"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/raleway_medium"
+                            android:maxLines="1"
+                            android:text="31st March 2020"
+                            android:textColor="@color/black"
+                            android:textSize="11sp" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/view_record"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:paddingTop="6dp"
+                android:layout_marginBottom="15dp"
+                android:fontFamily="@font/raleway_bold"
+                android:text="View Record"
+                android:textColor="@color/shinyBlue"
+                android:textSize="11sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/patient_photo"
+                app:layout_constraintTop_toBottomOf="@+id/appointment_time_view" />
+
+            <TextView
+                android:id="@+id/reschedule"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginBottom="0dp"
+                android:fontFamily="@font/raleway_bold"
+                android:text="Re-schedule Appointment"
+                android:textColor="@color/shinyBlue"
+                android:textSize="11sp"
+                app:layout_constraintBottom_toBottomOf="@+id/view_record"
+                app:layout_constraintStart_toEndOf="@+id/view_record" />
+
+            <!--delete prescription button-->
+
+            <ImageView
+                android:id="@+id/delete_prescription"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="15dp"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHeight_max="24dp"
+                app:layout_constraintHeight_min="18dp"
+                app:layout_constraintHorizontal_bias="0.971"
+                app:layout_constraintStart_toEndOf="@+id/patient_name"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintWidth_max="24dp"
+                app:layout_constraintWidth_min="18dp"
+                app:srcCompat="@drawable/delete" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

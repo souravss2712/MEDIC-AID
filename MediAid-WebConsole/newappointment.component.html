@@ -1,0 +1,168 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    </head>
+    <body >
+        <form #detailForm="ngForm" (ngSubmit)="onSubmitAppointment(detailForm)">
+            <p style="color:#3688E3;size:10px;"><b>Basic Details</b></p>
+            <table
+              style="border:none;border-width:0px;width:60%;height:80%;font-size:18px;"
+            >
+              <tr>
+                <td>
+                  <img src="profilePic.png" float="left" width="150px" height="150px" />
+                </td>
+                <td>
+                  <table style="float:left;">
+                    <tr>
+                      <td>
+                        Name
+                      </td>
+                      <td>
+                        <input
+                          type="text"
+                          id="name"
+                          class="form-control"
+                          name="name"
+                          ngModel
+                          required
+                          name
+                          style="border-left:none;border-right:none;border-top:none;outline:none;border-bottom-color:#3688E3;"
+                        />
+                        <br />
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        Age
+                      </td>
+                      <td>
+                        <input
+                          type="number"
+                          id="age"
+                          class="form-control"
+                          name="age"
+                          ngModel
+                          required
+                          number
+                          style="border-left:none;border-right:none;border-top:none;outline:none;border-bottom-color:#3688E3;"
+                        />
+                        <br />
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        Sex
+                      </td>
+                      <td>
+                        <input
+                          type="text"
+                          id="gender"
+                          class="form-control"
+                          name="gender"
+                          ngModel
+                          required
+                          name
+                          style="border-left:none;border-right:none;border-top:none;outline:none;border-bottom-color:#3688E3;"
+                        />
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+                <td>
+                  <p style="margin-left:20px;">Doctor ID</p>
+                  <input
+                    type="text"
+                    id="doctorid"
+                    class="form-control"
+                    name="doctorid"
+                    ngModel
+                    required
+                    name
+                    style="border-radius:5px;border-width:1px;border-style:solid;border-color:#3688E3;padding-left:10px;padding-top:6px;padding-bottom:6px;color:#3688E3;font-size:12px;"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p style="color:#3688E3;size:10px;"><b>Payment Details</b></p>
+                  <br />
+                  Amount Paid<input
+                    type="number"
+                    id="amountpaid"
+                    class="form-control"
+                    name="amountpaid"
+                    ngModel
+                    required
+                    number
+                    style="border-left:none;border-right:none;border-top:none;outline:none;border-bottom-color:#3688E3;"
+                  />
+                  <br />
+                  Amount Due<input
+                    type="number"
+                    id="amountdue"
+                    class="form-control"
+                    name="amountdue"
+                    ngModel
+                    required
+                    number
+                    style="border-left:none;border-right:none;border-top:none;outline:none;border-bottom-color:#3688E3;"
+                  />
+                </td>
+                <td>
+                  <p style="color:#3688E3;size:10px;"><b>Date and Time</b></p>
+                  <br />
+                  Date<input
+                    type="date"
+                    id="date"
+                    class="form-control"
+                    name="date"
+                    ngModel
+                    required
+                    date
+                    style="border-left:none;border-right:none;border-top:none;outline:none;border-bottom-color:#3688E3;"
+                  />
+                  <br />
+                  Time<input
+                    type="time"
+                    id="time"
+                    class="form-control"
+                    name="time"
+                    ngModel
+                    required
+                    time
+                    style="border-left:none;border-right:none;border-top:none;outline:none;border-bottom-color:#3688E3;"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p style="color:#3688E3;size:10px;"><b>Additional Details</b></p>
+                  <br />
+                  Address<input
+                    type="name"
+                    id="address"
+                    class="form-control"
+                    name="address"
+                    ngModel
+                    required
+                    address
+                    style="border-left:none;border-right:none;border-top:none;outline:none;border-bottom-color:#3688E3;"
+                  />
+                </td>
+                <td>
+                  <button
+                    type="submit"
+                    style="border-radius:5px;border-width:1px;border-style:solid;border-color:#3688E3;padding-left:10px;padding-top:10px;padding-bottom:10px;color:#FFFFFF;font-size:12px;background:#3688e3;float:center;"
+                  >
+                    CREATE APPOINTMENT
+                  </button>
+                </td>
+              </tr>
+            </table>
+          </form>
+
+    </body>
+</html>

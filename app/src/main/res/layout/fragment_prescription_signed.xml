@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fragment_background_gradient"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/saved"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="40dp"
+        android:src="@drawable/ic_saved"
+        app:layout_constraintBottom_toTopOf="@+id/pres_saved"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/pres_saved"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/raleway_bold"
+        android:text="Prescription Saved!"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/patient_name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/saved" />
+
+    <TextView
+        android:id="@+id/patient_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/raleway_semibold"
+        android:text="Patient Name: Kumar Harsh"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/diagnosis"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pres_saved" />
+
+    <TextView
+        android:id="@+id/diagnosis"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/raleway_semibold"
+        android:text="Diagnosis : Javamania"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/view_in_app"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/patient_name" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/sign_prescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="49dp"
+        android:layout_marginTop="69dp"
+        android:layout_marginEnd="49dp"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="4dp"
+        app:layout_constraintBottom_toTopOf="@+id/cardView3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/diagnosis">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/raleway_semibold"
+            android:paddingTop="9dp"
+            android:paddingBottom="9dp"
+            android:text="Sign Prescription"
+            android:textColor="@color/darkBlue" />
+
+    </androidx.cardview.widget.CardView>
+
+
+
+
+
+    <!--    <LinearLayout-->
+    <!--        android:id="@+id/linearLayout2"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:orientation="horizontal"-->
+    <!--        app:layout_constraintBottom_toBottomOf="parent">-->
+
+    <!--        <TextView-->
+    <!--            android:id="@+id/send"-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_weight="1"-->
+    <!--            android:background="@color/slateBlue"-->
+    <!--            android:fontFamily="@font/raleway_bold"-->
+    <!--            android:gravity="center"-->
+    <!--            android:paddingTop="20dp"-->
+    <!--            android:paddingBottom="20dp"-->
+    <!--            android:text="SEND"-->
+    <!--            android:textColor="@color/white"-->
+    <!--            android:textSize="16sp" />-->
+
+    <!--        <TextView-->
+    <!--            android:id="@+id/close"-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_weight="1"-->
+    <!--            android:background="@color/white"-->
+    <!--            android:fontFamily="@font/raleway_bold"-->
+    <!--            android:gravity="center"-->
+    <!--            android:paddingTop="20dp"-->
+    <!--            android:paddingBottom="20dp"-->
+    <!--            android:text="CLOSE"-->
+    <!--            android:textColor="@color/slateBlue"-->
+    <!--            android:textSize="16sp" />-->
+
+    <!--    </LinearLayout>-->
+</androidx.constraintlayout.widget.ConstraintLayout>

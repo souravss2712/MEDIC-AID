@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/mainBgBelow">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp">
+
+        <TextView
+            android:id="@+id/basic_details"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/raleway_bold"
+            android:text="BASIC DETAILS"
+            android:layout_marginTop="31dp"
+            android:textColor="?attr/slateBlue"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/patient_photo"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="16dp"
+            android:src="?attr/slateBlue"
+            android:layout_marginTop="15dp"
+            app:layout_constraintHeight_max="75dp"
+            app:layout_constraintHeight_min="65dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/basic_details"
+            app:layout_constraintWidth_max="75dp"
+            app:layout_constraintWidth_min="65dp" />
+
+        <TextView
+            android:id="@+id/full_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/raleway_medium"
+            android:text="Full Name"
+            android:layout_marginStart="21dp"
+            android:textColor="?attr/slateBlue"
+            android:textSize="11sp"
+            app:layout_constraintStart_toEndOf="@+id/patient_photo"
+            app:layout_constraintTop_toTopOf="@+id/patient_photo" />
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Patient Name"
+            android:textColor="?attr/colorText"
+            android:fontFamily="@font/raleway_medium"
+            android:layout_marginTop="4dp"
+            android:textSize="16dp"
+            app:layout_constraintStart_toStartOf="@+id/full_name"
+            app:layout_constraintTop_toBottomOf="@+id/full_name" />
+
+        <TextView
+            android:id="@+id/text_age"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="21dp"
+            android:fontFamily="@font/raleway_medium"
+            android:text="Age"
+            android:layout_marginTop="5dp"
+            android:textColor="?attr/slateBlue"
+            android:textSize="11sp"
+            app:layout_constraintStart_toEndOf="@+id/patient_photo"
+            app:layout_constraintTop_toBottomOf="@+id/name" />
+
+        <TextView
+            android:id="@+id/age"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="22"
+            android:layout_marginTop="4dp"
+            android:fontFamily="@font/raleway_medium"
+            android:textColor="?attr/colorText"
+            android:textSize="16dp"
+            app:layout_constraintStart_toStartOf="@+id/text_age"
+            app:layout_constraintTop_toBottomOf="@+id/text_age" />
+
+        <TextView
+            android:id="@+id/text_sex"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/raleway_medium"
+            android:text="Sex"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="0dp"
+            android:textColor="?attr/slateBlue"
+            android:textSize="11sp"
+            app:layout_constraintStart_toEndOf="@+id/text_age"
+            app:layout_constraintTop_toTopOf="@+id/text_age" />
+
+        <TextView
+            android:id="@+id/sex"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="M"
+            android:fontFamily="@font/raleway_medium"
+            android:textColor="?attr/colorText"
+            android:textSize="16dp"
+            app:layout_constraintStart_toStartOf="@+id/text_sex"
+            app:layout_constraintTop_toBottomOf="@+id/text_sex" />
+
+        <TextView
+            android:id="@+id/text_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="21dp"
+            android:fontFamily="@font/raleway_medium"
+            android:text="Address"
+            android:textColor="?attr/slateBlue"
+            android:layout_marginTop="5dp"
+            android:textSize="11sp"
+            app:layout_constraintStart_toEndOf="@+id/patient_photo"
+            app:layout_constraintTop_toBottomOf="@+id/sex" />
+
+        <TextView
+            android:id="@+id/address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Patna, Bihar"
+            android:fontFamily="@font/raleway_medium"
+            android:layout_marginTop="4dp"
+            android:textColor="?attr/colorText"
+            android:textSize="16dp"
+            app:layout_constraintStart_toStartOf="@+id/full_name"
+            app:layout_constraintTop_toBottomOf="@+id/text_address" />
+
+        <View
+            android:id="@+id/view4"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="15dp"
+            android:background="?attr/slateBlue"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/address" />
+
+        <TextView
+            android:id="@+id/symptoms_head"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/raleway_bold"
+            android:text="SYMPTOMS"
+            android:layout_marginTop="16dp"
+            android:textColor="?attr/slateBlue"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view4" />
+
+        <TextView
+            android:id="@+id/symptoms_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/raleway_medium"
+            android:text="Symptoms"
+            android:textColor="?attr/slateBlue"
+            android:layout_marginTop="18dp"
+            android:textSize="11sp"
+            app:layout_constraintStart_toStartOf="@+id/patient_photo"
+            app:layout_constraintTop_toBottomOf="@+id/symptoms_head" />
+
+        <TextView
+            android:id="@+id/symptoms"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dizziness fgdghfhfgrjhfh\nHeadachelejfiehfheifhrihfghuhgureg\nWeakness"
+            android:layout_marginTop="4dp"
+            android:fontFamily="@font/raleway_medium"
+            android:textColor="?attr/colorText"
+            android:textSize="16dp"
+            app:layout_constraintStart_toStartOf="@+id/symptoms_text"
+            app:layout_constraintTop_toBottomOf="@+id/symptoms_text" />
+
+        <View
+            android:id="@+id/view5"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="18dp"
+            android:layout_marginEnd="20dp"
+            android:background="?attr/slateBlue"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/symptoms" />
+
+        <TextView
+            android:id="@+id/diagnosis_head"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/raleway_bold"
+            android:text="DIAGNOSIS"
+            android:layout_marginTop="16dp"
+            android:textColor="?attr/slateBlue"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view5" />
+
+        <TextView
+            android:id="@+id/diagnosis_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/raleway_medium"
+            android:text="Diagnosis"
+            android:textColor="?attr/slateBlue"
+            android:layout_marginTop="18dp"
+            android:textSize="11sp"
+            app:layout_constraintStart_toStartOf="@+id/patient_photo"
+            app:layout_constraintTop_toBottomOf="@+id/diagnosis_head" />
+
+        <TextView
+            android:id="@+id/diagnosis"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Paracetamol fkjehfhehfejwofoiwhe\nIboPbofen nkheufhefngshi"
+            android:textColor="?attr/colorText"
+            android:fontFamily="@font/raleway_medium"
+            android:textSize="16dp"
+            android:layout_marginTop="4dp"
+            app:layout_constraintStart_toStartOf="@+id/symptoms_text"
+            app:layout_constraintTop_toBottomOf="@+id/diagnosis_text" />
+
+        <View
+            android:id="@+id/view6"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="18dp"
+            android:layout_marginEnd="20dp"
+            android:background="?attr/slateBlue"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/diagnosis" />
+
+        <TextView
+            android:id="@+id/prescription_head"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/raleway_bold"
+            android:text="PRESCRIPTION"
+            android:textColor="?attr/slateBlue"
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view6" />
+
+        <TextView
+            android:id="@+id/prescription_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/raleway_medium"
+            android:text="Prescription"
+            android:textColor="?attr/slateBlue"
+            android:textSize="11sp"
+            app:layout_constraintStart_toStartOf="@+id/patient_photo"
+            app:layout_constraintTop_toBottomOf="@+id/prescription_head" />
+
+        <TextView
+            android:id="@+id/prescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Paracetamol kjfedbwlkuyee\nIboPbofen"
+            android:textColor="?attr/colorText"
+            android:layout_marginTop="4dp"
+            android:fontFamily="@font/raleway_medium"
+            android:textSize="16dp"
+            app:layout_constraintStart_toStartOf="@+id/symptoms_text"
+            app:layout_constraintTop_toBottomOf="@+id/prescription_text" />
+
+        <TextView
+            android:id="@+id/advice_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/raleway_medium"
+            android:layout_marginTop="18dp"
+            android:text="Advice"
+            android:textColor="?attr/slateBlue"
+            android:textSize="11sp"
+            app:layout_constraintStart_toStartOf="@+id/patient_photo"
+            app:layout_constraintTop_toBottomOf="@+id/prescription" />
+
+        <TextView
+            android:id="@+id/advice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sleep properly\nEat and eat"
+            android:textColor="?attr/colorText"
+            android:layout_marginTop="4dp"
+            android:textSize="16dp"
+            android:fontFamily="@font/raleway_medium"
+            app:layout_constraintStart_toStartOf="@+id/symptoms_text"
+            app:layout_constraintTop_toBottomOf="@+id/advice_text" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:background="?attr/slateBlue"
+            android:layout_marginTop="18dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/advice" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
